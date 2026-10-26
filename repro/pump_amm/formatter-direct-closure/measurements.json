@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "scope": "three fixed windows and their five direct call sites",
+  "artifacts": {
+    "original": [
+      "evidence/original/pump_amm/deployed.so",
+      "6a7ad34596d83b4c435b32f458a56e718e9f82eb4ad38e4316616d15d24d8ff7"
+    ],
+    "candidate": [
+      "repro/pump_amm/owner6048-v144/main/candidate.so",
+      "09bee0dfd751dc6ae0240bbac262933c6bda6e0c94aa643f82c57f2956c3a117"
+    ],
+    "symbols": [
+      "repro/pump_amm/owner6048-v144/main/unstripped.so",
+      "f6e504317ba774325c0ba682e2529c7f18d1ae645a0d7aa239de557729dd0cb4"
+    ]
+  },
+  "windows": {
+    "pad_integral": {
+      "original_address": 1132800,
+      "candidate_address": 1074592,
+      "bytes": 1544,
+      "candidate_symbol": "_ZN4core3fmt9Formatter12pad_integral17hb54a14786030fdaeE",
+      "original_sha256": "f2931fce9350841b5a2f812c0575a03db5710e83b065b07b401d6a6b3e01665d",
+      "candidate_sha256": "28b80aaaaac49a4da61992420b0f10d00025473ff4fc776ee4747fa5a02acd32"
+    },
+    "write_prefix": {
+      "original_address": 1134344,
+      "candidate_address": 1076136,
+      "bytes": 184,
+      "candidate_symbol": "_ZN4core3fmt9Formatter12pad_integral12write_prefix17hcbf950c4fdbcc487E",
+      "original_sha256": "7e18e77b5d1c424352232623e864cee69f378e5488c04f2e0701f4c731a90461",
+      "candidate_sha256": "7e18e77b5d1c424352232623e864cee69f378e5488c04f2e0701f4c731a90461"
+    },
+    "do_count_chars": {
+      "original_address": 1142448,
+      "candidate_address": 1083480,
+      "bytes": 1472,
+      "candidate_symbol": "_ZN4core3str5count14do_count_chars17h2a76b56d3b6e4170E",
+      "original_sha256": "faf469ec1d3d22124d70677fd18ba2f3c651058495a32d9090dd1e150663f7a5",
+      "candidate_sha256": "faf469ec1d3d22124d70677fd18ba2f3c651058495a32d9090dd1e150663f7a5"
+    }
+  },
+  "differing_record_offsets": {
+    "pad_integral": [
+      432
+    ],
+    "write_prefix": [],
+    "do_count_chars": []
+  },
+  "new_builds": 0,
+  "target_executions": 0,
+  "limits": [
+    "Original function names/boundaries remain inferred.",
+    "Eight indirect call sites across parent and prefix remain unresolved.",
+    "Reachability is syntactic; memory validity, aliases, loop termination and output are not proved.",
+    "No authentic source/recipe recovery, status promotion or whole-program equality."
+  ],
+  "structure": {
+    "pad_integral": {
+      "instruction_records_per_image": 193,
+      "local_edges_per_image": 218,
+      "lddw_records_per_image": 0,
+      "memory_operations_per_image": 66,
+      "direct_calls_per_image": 5,
+      "indirect_calls_per_image": 6,
+      "exit_offsets": [
+        584
+      ],
+      "all_records_syntactically_reachable": true
+    },
+    "write_prefix": {
+      "instruction_records_per_image": 23,
+      "local_edges_per_image": 25,
+      "lddw_records_per_image": 0,
+      "memory_operations_per_image": 2,
+      "direct_calls_per_image": 0,
+      "indirect_calls_per_image": 2,
+      "exit_offsets": [
+        136
+      ],
+      "all_records_syntactically_reachable": true
+    },
+    "do_count_chars": {
+      "instruction_records_per_image": 178,
+      "local_edges_per_image": 197,
+      "lddw_records_per_image": 6,
+      "memory_operations_per_image": 14,
+      "direct_calls_per_image": 0,
+      "indirect_calls_per_image": 0,
+      "exit_offsets": [
+        1464
+      ],
+      "all_records_syntactically_reachable": true
+    }
+  }
+}
