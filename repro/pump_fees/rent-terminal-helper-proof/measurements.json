@@ -1,0 +1,227 @@
+{
+  "leaf_sha256": "5064629c0b173ec75a08a105975751990109ead5c78610174e373612d9c53026",
+  "cfg": {
+    "bytes": 272,
+    "instruction_slots": 34,
+    "decoded_instructions": 29,
+    "reachable_instructions": 29,
+    "conditional_branches": 8,
+    "unconditional_branches": 2,
+    "exits": [
+      264
+    ],
+    "edges": [
+      {
+        "offset": 0,
+        "successors": [
+          16
+        ]
+      },
+      {
+        "offset": 16,
+        "successors": [
+          32
+        ]
+      },
+      {
+        "offset": 32,
+        "successors": [
+          40
+        ]
+      },
+      {
+        "offset": 40,
+        "successors": [
+          48
+        ]
+      },
+      {
+        "offset": 48,
+        "successors": [
+          64
+        ]
+      },
+      {
+        "offset": 64,
+        "successors": [
+          72,
+          248
+        ]
+      },
+      {
+        "offset": 72,
+        "successors": [
+          80
+        ]
+      },
+      {
+        "offset": 80,
+        "successors": [
+          88
+        ]
+      },
+      {
+        "offset": 88,
+        "successors": [
+          96,
+          248
+        ]
+      },
+      {
+        "offset": 96,
+        "successors": [
+          104
+        ]
+      },
+      {
+        "offset": 104,
+        "successors": [
+          112
+        ]
+      },
+      {
+        "offset": 112,
+        "successors": [
+          120,
+          248
+        ]
+      },
+      {
+        "offset": 120,
+        "successors": [
+          128
+        ]
+      },
+      {
+        "offset": 128,
+        "successors": [
+          136
+        ]
+      },
+      {
+        "offset": 136,
+        "successors": [
+          144,
+          192
+        ]
+      },
+      {
+        "offset": 144,
+        "successors": [
+          160
+        ]
+      },
+      {
+        "offset": 160,
+        "successors": [
+          168,
+          248
+        ]
+      },
+      {
+        "offset": 168,
+        "successors": [
+          176
+        ]
+      },
+      {
+        "offset": 176,
+        "successors": [
+          184,
+          240
+        ]
+      },
+      {
+        "offset": 184,
+        "successors": [
+          248
+        ]
+      },
+      {
+        "offset": 192,
+        "successors": [
+          208
+        ]
+      },
+      {
+        "offset": 208,
+        "successors": [
+          216,
+          248
+        ]
+      },
+      {
+        "offset": 216,
+        "successors": [
+          224
+        ]
+      },
+      {
+        "offset": 224,
+        "successors": [
+          232,
+          240
+        ]
+      },
+      {
+        "offset": 232,
+        "successors": [
+          248
+        ]
+      },
+      {
+        "offset": 240,
+        "successors": [
+          248
+        ]
+      },
+      {
+        "offset": 248,
+        "successors": [
+          256
+        ]
+      },
+      {
+        "offset": 256,
+        "successors": [
+          264
+        ]
+      },
+      {
+        "offset": 264,
+        "successors": []
+      }
+    ],
+    "calls": 0,
+    "memory_accesses": 0,
+    "relocations": 0,
+    "all_local_paths_reach_exit": true
+  },
+  "callers": [
+    {
+      "name": "Rent::minimum_balance",
+      "original_start": 725664,
+      "candidate_start": 710688,
+      "bytes": 400,
+      "complete_direct_calls": 8,
+      "leaf_call_offset": 232,
+      "raw_equal": false,
+      "normalized_equal": true,
+      "complete_immediate_target_bodies_supported": true
+    },
+    {
+      "name": "Rent::is_exempt",
+      "original_start": 726064,
+      "candidate_start": 711088,
+      "bytes": 424,
+      "complete_direct_calls": 8,
+      "leaf_call_offset": 232,
+      "raw_equal": false,
+      "normalized_equal": true,
+      "complete_immediate_target_bodies_supported": true
+    }
+  ],
+  "full_binary_equality": false,
+  "transitive_call_data_equivalence_proven": false,
+  "historical_original_function_boundary_proven": false
+}

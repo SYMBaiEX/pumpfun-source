@@ -1,0 +1,631 @@
+{
+  "schema": 1,
+  "artifacts": {
+    "original": {
+      "path": "evidence/original/pump_fees/deployed.so",
+      "sha256": "4f2955d0f6b40cc9ff7daa18ccad7d19119ba1249759f4e7e3bb691beee6b35e",
+      "bytes": 948944
+    },
+    "candidate": {
+      "path": "repro/pump_fees/sharing-authorize-main-v144/main/candidate.so",
+      "sha256": "2387f8139a13918a5c9c523f140ecdd72db7243c8e2ed9cd7e1ff9d42ad6c8af",
+      "bytes": 863808
+    },
+    "symbols": {
+      "path": "repro/pump_fees/sharing-authorize-main-v144/main/symbols.so",
+      "sha256": "4a8084f8a1056e3d0b2df5b0a272c1a3f0a56d3e96532e1b8a2ba7eb21d6ac4c",
+      "bytes": 1238192
+    }
+  },
+  "prior_inventory": {
+    "path": "repro/layered-passes/pass-23/fees-current-evidence/analysis/full-function-inventory.json",
+    "sha256": "0b7e8afcbe4d3e281702c4a04b396fb01a208faade8ab96a834b5e010fb4257f"
+  },
+  "candidate_symbol": {
+    "name": "__gedf2",
+    "start": 787152,
+    "size": 272,
+    "section": 1
+  },
+  "original_terminal_extent": {
+    "start": 799664,
+    "end": 799936,
+    "basis": "direct-call target to original .text end; not a recovered historical function symbol"
+  },
+  "windows": {
+    "original-leaf": {
+      "side": "original",
+      "start": 799664,
+      "bytes": 272,
+      "file": "bytes/original-leaf.bin",
+      "sha256": "5064629c0b173ec75a08a105975751990109ead5c78610174e373612d9c53026",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 799664
+      },
+      "relocations": []
+    },
+    "candidate-leaf": {
+      "side": "candidate",
+      "start": 787152,
+      "bytes": 272,
+      "file": "bytes/candidate-leaf.bin",
+      "sha256": "5064629c0b173ec75a08a105975751990109ead5c78610174e373612d9c53026",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 787152
+      },
+      "relocations": []
+    },
+    "candidate-710688": {
+      "side": "candidate",
+      "start": 710688,
+      "bytes": 400,
+      "file": "bytes/candidate-710688.bin",
+      "sha256": "14eb7cc603b82b338ef19fd53bdb131a154b10a366f43a69d7fab2f2958fd432",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 710688
+      },
+      "relocations": [
+        {
+          "offset": 352,
+          "type": 8,
+          "symbol_index": 0
+        },
+        {
+          "offset": 376,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "original-725664": {
+      "side": "original",
+      "start": 725664,
+      "bytes": 400,
+      "file": "bytes/original-725664.bin",
+      "sha256": "ed238ff416330e78e4802b4f47fe068e2dc508a07514af17801c4c08b725acd0",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 725664
+      },
+      "relocations": [
+        {
+          "offset": 352,
+          "type": 8,
+          "symbol_index": 0
+        },
+        {
+          "offset": 376,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "original-799040": {
+      "side": "original",
+      "start": 799040,
+      "bytes": 352,
+      "file": "bytes/original-799040.bin",
+      "sha256": "face056642083fcc15c6737f1910030a4b59b6a78a4fa523f142dc0f28635762",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 799040
+      },
+      "relocations": []
+    },
+    "candidate-786800": {
+      "side": "candidate",
+      "start": 786800,
+      "bytes": 352,
+      "file": "bytes/candidate-786800.bin",
+      "sha256": "face056642083fcc15c6737f1910030a4b59b6a78a4fa523f142dc0f28635762",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 786800
+      },
+      "relocations": []
+    },
+    "original-796528": {
+      "side": "original",
+      "start": 796528,
+      "bytes": 504,
+      "file": "bytes/original-796528.bin",
+      "sha256": "ee6c416814bc1f9205e1f21131e9f47bc0d31a1abff7308d36dbee7247be0312",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 796528
+      },
+      "relocations": []
+    },
+    "candidate-786296": {
+      "side": "candidate",
+      "start": 786296,
+      "bytes": 504,
+      "file": "bytes/candidate-786296.bin",
+      "sha256": "ee6c416814bc1f9205e1f21131e9f47bc0d31a1abff7308d36dbee7247be0312",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 786296
+      },
+      "relocations": []
+    },
+    "original-797032": {
+      "side": "original",
+      "start": 797032,
+      "bytes": 16,
+      "file": "bytes/original-797032.bin",
+      "sha256": "ea4a9eb8f2da946a9c1f685c58439cd558ade7eb4283fd6321fc71fba3f7675e",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 797032
+      },
+      "relocations": []
+    },
+    "candidate-787424": {
+      "side": "candidate",
+      "start": 787424,
+      "bytes": 16,
+      "file": "bytes/candidate-787424.bin",
+      "sha256": "ea4a9eb8f2da946a9c1f685c58439cd558ade7eb4283fd6321fc71fba3f7675e",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 787424
+      },
+      "relocations": []
+    },
+    "original-796168": {
+      "side": "original",
+      "start": 796168,
+      "bytes": 192,
+      "file": "bytes/original-796168.bin",
+      "sha256": "03dca66cadef1c8ba0e1246ed124b98e81b63af414f7d929781734a24923c79b",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 796168
+      },
+      "relocations": []
+    },
+    "candidate-785968": {
+      "side": "candidate",
+      "start": 785968,
+      "bytes": 192,
+      "file": "bytes/candidate-785968.bin",
+      "sha256": "03dca66cadef1c8ba0e1246ed124b98e81b63af414f7d929781734a24923c79b",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 785968
+      },
+      "relocations": []
+    },
+    "original-799392": {
+      "side": "original",
+      "start": 799392,
+      "bytes": 272,
+      "file": "bytes/original-799392.bin",
+      "sha256": "5064629c0b173ec75a08a105975751990109ead5c78610174e373612d9c53026",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 799392
+      },
+      "relocations": []
+    },
+    "candidate-789432": {
+      "side": "candidate",
+      "start": 789432,
+      "bytes": 272,
+      "file": "bytes/candidate-789432.bin",
+      "sha256": "5064629c0b173ec75a08a105975751990109ead5c78610174e373612d9c53026",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 789432
+      },
+      "relocations": []
+    },
+    "original-791384": {
+      "side": "original",
+      "start": 791384,
+      "bytes": 88,
+      "file": "bytes/original-791384.bin",
+      "sha256": "2c421f6c14457c930bc6ab1b075ebf821b640c39ba3d70c48d5f2121fd5a0fc2",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 791384
+      },
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "candidate-781184": {
+      "side": "candidate",
+      "start": 781184,
+      "bytes": 88,
+      "file": "bytes/candidate-781184.bin",
+      "sha256": "b58622cadd5926d257388b872d86a605dc80258e8cde80cf1839980a4c06e332",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 781184
+      },
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "original-791560": {
+      "side": "original",
+      "start": 791560,
+      "bytes": 88,
+      "file": "bytes/original-791560.bin",
+      "sha256": "e789b7bc39307c083fb0e63329061549bbc9e1b942592f5e5700e163cedde088",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 791560
+      },
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "candidate-781360": {
+      "side": "candidate",
+      "start": 781360,
+      "bytes": 88,
+      "file": "bytes/candidate-781360.bin",
+      "sha256": "0f10f01c5a7b90bc491c9942bcbe4d8eb653787a2fcb009f70a259d92bd2aca8",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 781360
+      },
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "candidate-711088": {
+      "side": "candidate",
+      "start": 711088,
+      "bytes": 424,
+      "file": "bytes/candidate-711088.bin",
+      "sha256": "0cd21c0c573f359a6d2f704f5bbaf81286667e5f0fe42a79ff8c5ee1158c4a63",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 789416,
+        "file_offset": 711088
+      },
+      "relocations": [
+        {
+          "offset": 376,
+          "type": 8,
+          "symbol_index": 0
+        },
+        {
+          "offset": 400,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    },
+    "original-726064": {
+      "side": "original",
+      "start": 726064,
+      "bytes": 424,
+      "file": "bytes/original-726064.bin",
+      "sha256": "7461fc9deb5d190fd1382326907c9cc2db44193dc214e5f993db2a82f560c0b4",
+      "mapping": {
+        "section_va": 288,
+        "section_file_offset": 288,
+        "section_bytes": 799648,
+        "file_offset": 726064
+      },
+      "relocations": [
+        {
+          "offset": 376,
+          "type": 8,
+          "symbol_index": 0
+        },
+        {
+          "offset": 400,
+          "type": 8,
+          "symbol_index": 0
+        }
+      ]
+    }
+  },
+  "callers": [
+    {
+      "name": "Rent::minimum_balance",
+      "original": "original-725664",
+      "candidate": "candidate-710688",
+      "original_calls": [
+        {
+          "offset": 104,
+          "target": 799040,
+          "signed_immediate": 9158
+        },
+        {
+          "offset": 168,
+          "target": 796528,
+          "signed_immediate": 8836
+        },
+        {
+          "offset": 192,
+          "target": 797032,
+          "signed_immediate": 8896
+        },
+        {
+          "offset": 232,
+          "target": 799664,
+          "signed_immediate": 9220
+        },
+        {
+          "offset": 256,
+          "target": 796168,
+          "signed_immediate": 8780
+        },
+        {
+          "offset": 304,
+          "target": 799392,
+          "signed_immediate": 9177
+        },
+        {
+          "offset": 368,
+          "target": 791384,
+          "signed_immediate": 8168
+        },
+        {
+          "offset": 392,
+          "target": 791560,
+          "signed_immediate": 8187
+        }
+      ],
+      "candidate_calls": [
+        {
+          "offset": 104,
+          "target": 786800,
+          "signed_immediate": 9500
+        },
+        {
+          "offset": 168,
+          "target": 786296,
+          "signed_immediate": 9429
+        },
+        {
+          "offset": 192,
+          "target": 787424,
+          "signed_immediate": 9567
+        },
+        {
+          "offset": 232,
+          "target": 787152,
+          "signed_immediate": 9528
+        },
+        {
+          "offset": 256,
+          "target": 785968,
+          "signed_immediate": 9377
+        },
+        {
+          "offset": 304,
+          "target": 789432,
+          "signed_immediate": 9804
+        },
+        {
+          "offset": 368,
+          "target": 781184,
+          "signed_immediate": 8765
+        },
+        {
+          "offset": 392,
+          "target": 781360,
+          "signed_immediate": 8784
+        }
+      ]
+    },
+    {
+      "name": "Rent::is_exempt",
+      "original": "original-726064",
+      "candidate": "candidate-711088",
+      "original_calls": [
+        {
+          "offset": 112,
+          "target": 799040,
+          "signed_immediate": 9107
+        },
+        {
+          "offset": 176,
+          "target": 796528,
+          "signed_immediate": 8785
+        },
+        {
+          "offset": 200,
+          "target": 797032,
+          "signed_immediate": 8845
+        },
+        {
+          "offset": 232,
+          "target": 799664,
+          "signed_immediate": 9170
+        },
+        {
+          "offset": 256,
+          "target": 796168,
+          "signed_immediate": 8730
+        },
+        {
+          "offset": 312,
+          "target": 799392,
+          "signed_immediate": 9126
+        },
+        {
+          "offset": 392,
+          "target": 791384,
+          "signed_immediate": 8115
+        },
+        {
+          "offset": 416,
+          "target": 791560,
+          "signed_immediate": 8134
+        }
+      ],
+      "candidate_calls": [
+        {
+          "offset": 112,
+          "target": 786800,
+          "signed_immediate": 9449
+        },
+        {
+          "offset": 176,
+          "target": 786296,
+          "signed_immediate": 9378
+        },
+        {
+          "offset": 200,
+          "target": 787424,
+          "signed_immediate": 9516
+        },
+        {
+          "offset": 232,
+          "target": 787152,
+          "signed_immediate": 9478
+        },
+        {
+          "offset": 256,
+          "target": 785968,
+          "signed_immediate": 9327
+        },
+        {
+          "offset": 312,
+          "target": 789432,
+          "signed_immediate": 9753
+        },
+        {
+          "offset": 392,
+          "target": 781184,
+          "signed_immediate": 8712
+        },
+        {
+          "offset": 416,
+          "target": 781360,
+          "signed_immediate": 8731
+        }
+      ]
+    }
+  ],
+  "target_pairs": {
+    "0": {
+      "original": "original-799040",
+      "candidate": "candidate-786800",
+      "candidate_names": [
+        "__multi3"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "1": {
+      "original": "original-796528",
+      "candidate": "candidate-786296",
+      "candidate_names": [
+        "__floatundidf"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "2": {
+      "original": "original-797032",
+      "candidate": "candidate-787424",
+      "candidate_names": [
+        "__muldf3"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "3": {
+      "original": "original-leaf",
+      "candidate": "candidate-leaf",
+      "candidate_names": [
+        "__gedf2"
+      ],
+      "original_boundary_basis": "terminal text end; no next inferred entry"
+    },
+    "4": {
+      "original": "original-796168",
+      "candidate": "candidate-785968",
+      "candidate_names": [
+        "__fixunsdfdi"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "5": {
+      "original": "original-799392",
+      "candidate": "candidate-789432",
+      "candidate_names": [
+        "__gtdf2"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "6": {
+      "original": "original-791384",
+      "candidate": "candidate-781184",
+      "candidate_names": [
+        "_ZN4core9panicking11panic_const24panic_const_add_overflow17h490567cbdd03e99bE"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    },
+    "7": {
+      "original": "original-791560",
+      "candidate": "candidate-781360",
+      "candidate_names": [
+        "_ZN4core9panicking11panic_const24panic_const_mul_overflow17h630bce620d304031E"
+      ],
+      "original_boundary_basis": "next inferred direct-call/relocation/symbol entry"
+    }
+  }
+}
