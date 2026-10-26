@@ -175,6 +175,19 @@ class OfflineInputsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'not executable'):
             o.guarded_command(['never-execute'])
 
+    def test_additional_exact_guard_pin_records_selected_hash_and_keeps_original(self):
+        expected = o.digest(self.sandbox)
+        with patch.object(o, 'SANDBOX_SHA', '0' * 64), \
+             patch.object(o, 'SANDBOX_MACOS_27_2_SHA', expected):
+            self.assertEqual(o.sandbox_identity()['sha256'], expected)
+            self.assertEqual(o.guarded_command(['never-execute']),
+                             [str(self.sandbox), '-p', o.NETWORK_PROFILE, 'never-execute'])
+            self.sandbox.write_bytes(b'unlisted guard')
+            with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                o.sandbox_identity()
+        self.sandbox.write_bytes(b'never executed sandbox fixture')
+        self.assertEqual(o.sandbox_identity()['sha256'], expected)
+
     def fixture_reproduction(self):
         repo = self.home / 'fixture-repository'
         package = repo / r.PACKAGE

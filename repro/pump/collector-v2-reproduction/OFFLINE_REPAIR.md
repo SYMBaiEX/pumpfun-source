@@ -1,5 +1,9 @@
 # Offline installer-input repair
 
+The status below records the repair's boundary when it landed. The subsequent
+[native validation](native-validation-20261026/README.md) records two actual
+guarded executions; the earlier receipts have not been reclassified.
+
 The repaired recipe has not been run with native SDK/compiler tools. Its tests
 use synthetic trees, inert data fixtures and mocked subprocess launches. No new
 build output or target-runtime qualification is claimed.

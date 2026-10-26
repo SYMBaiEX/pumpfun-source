@@ -13,6 +13,8 @@ CONTROLS = Path(__file__).resolve().parent / 'install-cache-identity'
 CACHE_SEAL = '704222a8ab95bb0f09ddba93b9d6c9411c2553d0a378b92ccb6354342f8254a0'
 SANDBOX = Path('/usr/bin/sandbox-exec')
 SANDBOX_SHA = 'fd89e1f6e6d822fcc0f3844bd11fecdc9b68f705f80c32f4334bc23913d5451b'
+# Separately observed Apple-signed input on macOS 27.2 build 26B5101f.
+SANDBOX_MACOS_27_2_SHA = '0c39f18a1a71e2c31cc9a07deac4418a1701454718df98caa812705f84520e3e'
 NETWORK_PROFILE = '(version 1)(allow default)(deny network*)'
 REQUIRED_PLATFORM = ('rust/bin/rustc', 'rust/lib/librustc_driver-701c94505f05bbc4.dylib',
                      'llvm/bin/llvm-objcopy')
@@ -109,9 +111,11 @@ def verify_tree(root, inventory, required=()):
 
 
 def sandbox_identity():
-    checked(SANDBOX, SANDBOX_SHA)
+    require(SANDBOX.is_file() and not SANDBOX.is_symlink(), 'missing or linked input: ' + str(SANDBOX))
+    observed = digest(SANDBOX)
+    require(observed in (SANDBOX_SHA, SANDBOX_MACOS_27_2_SHA), 'input hash mismatch: ' + str(SANDBOX))
     require(SANDBOX.stat().st_mode & 0o111 and os.access(SANDBOX, os.X_OK), 'network guard not executable')
-    return {'executable': str(SANDBOX), 'sha256': SANDBOX_SHA, 'profile': NETWORK_PROFILE}
+    return {'executable': str(SANDBOX), 'sha256': observed, 'profile': NETWORK_PROFILE}
 
 
 def install_inputs(home=None, controls=CONTROLS):

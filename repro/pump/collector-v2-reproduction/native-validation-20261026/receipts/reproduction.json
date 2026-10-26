@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)",
+    "/Users/symbiex/dev/austin/lalalune/pumpfun-source/.venv/bin/python",
+    "-B",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/repo/scripts/build_partial_candidate.py",
+    "--manifest",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/repo/programs/pump/Cargo.toml",
+    "--program",
+    "pump",
+    "--artifact-name",
+    "pump_recovered.so",
+    "--tools-version",
+    "v1.44",
+    "--output",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/build"
+  ],
+  "helper_command": [
+    "/Users/symbiex/dev/austin/lalalune/pumpfun-source/.venv/bin/python",
+    "-B",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/repo/scripts/build_partial_candidate.py",
+    "--manifest",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/repo/programs/pump/Cargo.toml",
+    "--program",
+    "pump",
+    "--artifact-name",
+    "pump_recovered.so",
+    "--tools-version",
+    "v1.44",
+    "--output",
+    "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/build"
+  ],
+  "network_guard": {
+    "executable": "/usr/bin/sandbox-exec",
+    "sha256": "0c39f18a1a71e2c31cc9a07deac4418a1701454718df98caa812705f84520e3e",
+    "profile": "(version 1)(allow default)(deny network*)"
+  },
+  "cwd": "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/repo",
+  "environment": {
+    "HOME": "/Users/symbiex",
+    "PATH": "/Users/symbiex/dev/austin/lalalune/pumpfun-source/work/collector-rebuild-20261026/launch:/Users/symbiex/dev/austin/lalalune/pumpfun-source/work/collector-rebuild-20261026/agave-v2.1.21/solana-release/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "CARGO_HOME": "/Users/symbiex/dev/austin/lalalune/pumpfun-source/work/collector-rebuild-20261026/cargo-home",
+    "RUSTUP_HOME": "/Users/symbiex/dev/austin/lalalune/pumpfun-source/work/collector-rebuild-20261026/rustup-seed",
+    "CARGO_TARGET_DIR": "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/build/target",
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_TERM_COLOR": "never",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TMPDIR": "/Users/symbiex/dev/austin/lalalune/collector-guarded-pass-20261026/native-build/tmp",
+    "NO_DNA": "1"
+  },
+  "inputs": {
+    "source37": {
+      "programs/pump/Cargo.toml": "2e573ab4e47e5032b9dd3cb21391502bbd91c648ab37c63b99a63fa80afacf0e",
+      "programs/pump/Cargo.lock": "486cbaa1eab7a945e849df5f72ca7c1e0b172ab8a17a1cd7a353fde123a84e95",
+      "programs/pump/recovered/constant_product_host.rs": "ee2e9e7fb89d7cdc42525dcafa28c802faab4ccb874652fa9df2307b11bc5825",
+      "programs/pump/recovered/constant_product.rs": "ec71f386f5f42abca163df627c7d8a5741c8954efec8732a1c9093728d33a99b",
+      "programs/pump/recovered/sell_accounting_host.rs": "b4aa42643c68895a23b99d5c46ac429cdaff76f0b650b69211b813b48859a39a",
+      "programs/pump/recovered/sell_accounting.rs": "23c1bbd79d6aa2987472a6eba572e0ded99cc8846cffd6bc23883f0700a25983",
+      "programs/pump/src/distribution.rs": "0987e4747d5729952d2109ce7ee42842fe47f49543e9c0709fb46c6cb8f96185",
+      "programs/pump/src/extend.rs": "e1a4e4cac477e0e9bd9d8ebe650839aa5410e7edf084f6478c1a1f404d3800f8",
+      "programs/pump/src/admin_cto.rs": "950d6ec8c07072a3305c905509018f95b40d53e9ab25a4c1bda96b42c2a2fe58",
+      "programs/pump/src/set_creator.rs": "74cf477dc2607e6834d792123e0a0a7e8e374912aefc060f681c39cf30e5eb8b",
+      "programs/pump/src/global_init.rs": "c5d65cd6536d9d0b18c4152617052023bc800f6a0c5652e031c33d90f1747891",
+      "programs/pump/src/volume_sync.rs": "309ef3db60b5cdf76e08b39eb73c0e33d146a9bb85a08bd4053217901a5026ad",
+      "programs/pump/src/cashback.rs": "647c24a4c6ad68a2b8e43ae60da9cbf9fa805e2c9a3227ace595033c56232410",
+      "programs/pump/src/multi_hop_curve.rs": "7175db4f8c7a6beb9f965562a2b32f61526d38fa3e8cef399b525a6371baba4a",
+      "programs/pump/src/create_v2.rs": "603e907d858ff3aa00e5e4f52805f22ec036255783e468454b04bceefa5609b3",
+      "programs/pump/src/legacy_buy.rs": "f28885fc019ee2ff44464272fab67191f0d0616c5549b79217b7d3f64a0e0847",
+      "programs/pump/src/legacy_sell.rs": "7078d27b768f0bd678d1463772a2177d5e092cebcbe4372c1711b5856574224b",
+      "programs/pump/src/buy_v2.rs": "2807d9bb8ff4958171ea5ce1a854fe3bec047ff3d392a01da8651231333a7e46",
+      "programs/pump/src/lib.rs": "0634b73caafc19ce163f9ec464de7338bd7075f538d6198c67e9f68a00598281",
+      "programs/pump/src/trade.rs": "d8491a3fb3a7b61948938600024ff4a787cd6ed855895f71af2451c469d99fa4",
+      "programs/pump/src/set_params.rs": "43beba987f5347ea646fe4ebf3a48aede7ce71a7f77bcb0167d0beabe0aaaa0e",
+      "programs/pump/src/collect_v2.rs": "2915dc08ced5022aea32fa0440d6d24ab7f30197ef25f1055c9c6c73d8d22df1",
+      "programs/pump/src/create.rs": "d00b52848071d1b2edb8fddd8e716e7bd407f1e9c1c5b691dec95312fb7f0bbb",
+      "programs/pump/src/sell_v2.rs": "a81d214a3153ccc0976194e1e4609a63ecfddd095113d5818ff729fb187bc033",
+      "programs/pump/src/migrate.rs": "b9e3dd278c84b413f8d6a823a6a95af516816e4b40c2d9e157d4f1bef71fe99f",
+      "programs/pump/src/trade_types.rs": "c7a00a49c44294f4984f7268c54b0547374484920022b54495acb50ef6700207",
+      "programs/pump/src/holder_distribution.rs": "29ac5561bc59baddf7e962e95013053099699dafeca5b95550b219c9e1a57d04",
+      "programs/pump/src/migrate_v2.rs": "0e0be1e808ef796287fcd6a8631297e1c51e6d79663d42b21b9f7fbf22ceb522",
+      "programs/pump/src/sweep.rs": "5d88bb58cc4d0818a1252da424e4cfa196d82caf43728646e4548dbad52e3167",
+      "programs/pump/src/nested_create.rs": "fa9b27bcd090e2f41e566263ea13c9e9a4e2b9c401b6dc6eda32881a92b693b3",
+      "programs/pump/src/creator_migration.rs": "d4dda2ba7cdb175e227ffcd2d9262dad44237cb86d17287d47fc4910432fcd36",
+      "programs/pump/src/minimum.rs": "ebc8f6f1a2c5aaa00211473cbd68ac1e006a0a80cbdba611046b10f8932c8631",
+      "programs/pump/src/idl_authority.rs": "a930baa51a270dcddb70becc6ece7edb0a93afca3e73543cd1842dc04f73cbf2",
+      "programs/pump/src/quote_control/initialize_quote_control.rs": "f69183651495574b85e572aafd23ab768fdf3072a0d4c7e05da6ca51715b9136",
+      "programs/pump/src/quote_control/mod.rs": "c1a355d9ed55a4b69224ddd3ddc703b2dd7608bc8aa0bbde830d88a6a61a8120",
+      "programs/pump/src/quote_control/update_quote_control_mints.rs": "93140eca968e6753b64ab19b0fc66dbfe4e89d777690392377ff3a5f94e62945",
+      "programs/pump/src/quote_control/state.rs": "98df5c28a3c0006fcdef4f3cb0c3529ad0aca6393fe8b99852f12abc502d5213"
+    },
+    "helpers": {
+      "scripts/build_source_manifest.py": "bbcf5081f99cc911af108216dee430ac15721c16159406490beb7671e4b14a8b",
+      "scripts/build_partial_candidate.py": "bb683621ffc4297c58f030cb03da54484b7370b786fd8eda965a37f4b3198ee9",
+      "scripts/compare.py": "9e33a6c239927728b96bb1305bffad0e144a701e9ac7723928bb2f8d49f63e67",
+      "scripts/analyze.py": "dd7fb38d795d4dd72a25aab0d65c2223d9f6f75d8b3ecb0de1d87d6e102910ac"
+    },
+    "sdk_files": 53,
+    "compiler_regular_files": 2773,
+    "compiler_symlinks": 12,
+    "dependencies": {
+      "locked_packages": 252,
+      "namespace_views": 2,
+      "source_files_checked": 15866
+    },
+    "sdk_install_inputs": {
+      "scope": "new current local cache identity, not official or historical provenance",
+      "cache_control_seal": "704222a8ab95bb0f09ddba93b9d6c9411c2553d0a378b92ccb6354342f8254a0",
+      "platform_tools_v1_52": {
+        "resolved_root": "/Users/symbiex/.cache/solana/v1.52/platform-tools",
+        "entries": 3842,
+        "regular_files": 3210,
+        "symlinks": 11
+      },
+      "criterion_v2_3_2_darwin": {
+        "resolved_root": "/Users/symbiex/.cache/solana/v2.3.2/criterion",
+        "entries": 38,
+        "regular_files": 30,
+        "symlinks": 2
+      },
+      "network_guard": {
+        "executable": "/usr/bin/sandbox-exec",
+        "sha256": "0c39f18a1a71e2c31cc9a07deac4418a1701454718df98caa812705f84520e3e",
+        "profile": "(version 1)(allow default)(deny network*)"
+      },
+      "checker_sha256": "7f2208c5aa2c5bc27f5dbcc7de6b3d3265d8f54cba035fc34389dbde10e34ca1"
+    }
+  },
+  "started_unix": 1793042277.655335,
+  "candidate_selected": false,
+  "reproducer_sha256": "102aabf22bfdfcfc0aef80b55bc7c8e929fa50ff2c4ea9e52a5d2b230940cf39",
+  "guarded_command_returncode": 0,
+  "helper_returncode": null,
+  "outputs": {
+    "executable": {
+      "bytes": 1590856,
+      "sha256": "fdfdb5f27af9b8c22effd48ea523c06bd037ceedf49df0da8178cad19eed38f5",
+      "whole_file_equal": true
+    },
+    "unstripped": {
+      "bytes": 2174728,
+      "sha256": "1e088e9add0218ebf6745a7f7557a4dc55dc68e86ec97790584db7f169c14bc3",
+      "whole_file_equal": true
+    }
+  },
+  "build_sbf_returncode": 0,
+  "inputs_unchanged": true,
+  "finished_unix": 1793042299.497497
+}

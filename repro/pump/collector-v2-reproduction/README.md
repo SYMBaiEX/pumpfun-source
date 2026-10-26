@@ -10,7 +10,7 @@ snapshot. The preserved pre-repair build receipts report both complete tested ou
 
 ## Run
 
-Requires Darwin ARM64, Python 3.12+, `/usr/bin/sandbox-exec` with the pinned
+Requires Darwin ARM64, Python 3.12+, `/usr/bin/sandbox-exec` with a supported pinned
 executable hash, and complete existing v1.52 platform-tools and Darwin Criterion
 v2.3.2 caches matching [install-cache-identity](install-cache-identity/REPORT.md).
 Those inventories are newly observed local input identities, not official release
@@ -57,15 +57,19 @@ for the earlier recipe, which did not enforce OS network denial or authenticate
 the complete installer inputs. Their successful output comparisons remain evidence;
 they do not establish those stronger offline/tool-closure properties.
 [OFFLINE_REPAIR.md](OFFLINE_REPAIR.md) records the repair and its unexecuted native
-validation boundary. No new native build is claimed for the repaired recipe.
+validation boundary at that time. [Native validation](native-validation-20261026/README.md)
+now records two fresh guarded builds, both matching the tested executable and
+symbols, and an additional exact Apple-signed guard pin for the recorded host.
 
-The earlier local validation reports: The matching executable passed 9,269 existing differential comparisons
-and 1,024 offline Surfpool comparisons. Counts include repeated inputs and retain
-the harnesses' existing normalization and coverage limits. Their raw qualification
-receipts remain local; this package publishes their hash inventory, not a portable
-re-verification of unexported data. Build logs and compact reproduction receipts
-are published here. Standard repository CI checks the unchanged selected state;
-the commands above exercise this new recipe.
+The earlier local validation reported 9,269 existing differential comparisons and
+1,024 offline Surfpool comparisons. A local cleanup deleted those unexported raw
+payloads; their frozen index cannot recover them. The native validation package
+records separate new reruns with the same comparison counts and zero mismatches.
+Counts include repeated inputs and retain the harnesses' existing normalization
+and coverage limits. New raw qualification receipts remain local; the published
+inventory does not provide portable re-verification of unexported data. Build logs
+and compact reproduction receipts are published here. Standard repository CI checks
+the unchanged selected state; the commands above exercise this recipe.
 
 Active source, selected artifacts and status remain unchanged. The preserved receipts support reproduction of the tested collector candidate; original deployment byte identity
 and historical build provenance remain unresolved. The original controller's

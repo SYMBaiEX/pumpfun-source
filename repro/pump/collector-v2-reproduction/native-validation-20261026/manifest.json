@@ -1,0 +1,93 @@
+{
+  "scope": "New guarded native build execution and host guard support; no selected-state or original-deployment identity change.",
+  "recipe_sha256": {
+    "prepare.py": "acb286adc08f58c134b1f6080e7a21026cdd2b597f7aa49ef619d7cb17efb6c6",
+    "reproduce.py": "102aabf22bfdfcfc0aef80b55bc7c8e929fa50ff2c4ea9e52a5d2b230940cf39",
+    "offline_inputs.py": "7f2208c5aa2c5bc27f5dbcc7de6b3d3265d8f54cba035fc34389dbde10e34ca1",
+    "test_prepare.py": "5db2c268315b19ebe07a3a8f4030b45679a08f48f07ae505940c6742215d6857",
+    "test_reproduce.py": "b6921172f20992500b3ac803962ba815653af4dddb142bef0dfd2d83c9d065de",
+    "test_offline_inputs.py": "15a5239ef26b3b5c203f96146a59e0e8e94c418736fb9f8b6209aef9e0884002"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 2895,
+      "sha256": "9702e73afb66f02c73b31cba3ebf33a8b47c3fbd8aa8cdb4cfae7c2940e6908f"
+    },
+    "receipts/build-attempt.json.gz": {
+      "bytes": 2424,
+      "sha256": "514209fab7bf32b6987845c1ae56e605d52db1dbd16158070b656146b58196a6"
+    },
+    "receipts/build.log.gz": {
+      "bytes": 3418,
+      "sha256": "e1f893c4c2d543aaeef3e566a603c92b730ba3fae833847d144f0855a2bb04e4"
+    },
+    "receipts/comparisons.json": {
+      "bytes": 1058,
+      "sha256": "d6a1de4880491a8460b6e9b3f87a1b2a91c903b0201ad83f766df18cc6c71f03"
+    },
+    "receipts/guard-probe.json.gz": {
+      "bytes": 865,
+      "sha256": "92e5aa104954542849277f8c37e9c0c803140cd107e7fc3e0f66a2abfa05d863"
+    },
+    "receipts/guard_probe.py.gz": {
+      "bytes": 1406,
+      "sha256": "c25f95708cc278b205004594d6cebf40c292017f5655a0fba17b1865b0a36e20"
+    },
+    "receipts/host-identity.json": {
+      "bytes": 2290,
+      "sha256": "7928a9a0ddf0eb5364da8b8f8b0bc1b8668a2adf7668b8afd1e779e5793e7817"
+    },
+    "receipts/initial-preflight.json": {
+      "bytes": 169,
+      "sha256": "b9b624897ea19b52cb231de08fe0d8abfbf01dfbb229b29911ff0c2e37a5bfb7"
+    },
+    "receipts/invocation-streams.json.gz": {
+      "bytes": 4403,
+      "sha256": "00d2a8169e3c853469d2a1920ece03edc82a536fa1593c01227926101284ccf4"
+    },
+    "receipts/preparation.json": {
+      "bytes": 6222,
+      "sha256": "ef085941fca4a873f4fa5fae6c1fbd8c4e54986beaac822a4379cfe780f0320f"
+    },
+    "receipts/qualification-crypto.json.gz": {
+      "bytes": 115762,
+      "sha256": "a881300f6adf0e51c7931b0b5e0be5d30458ae5e207350ca98487dccf1e7820e"
+    },
+    "receipts/qualification-execution-index.json.gz": {
+      "bytes": 10329,
+      "sha256": "c2bd47c1b85e973695a9ba37a3b1959c42d143439fbc36b6fe7093e9ec1ac170"
+    },
+    "receipts/qualification-orchestration.stderr.gz": {
+      "bytes": 574,
+      "sha256": "b2d08fe4fe2a75d614aafed0f111eeb378d2a5b289f7b874a93a6cb28047ae4a"
+    },
+    "receipts/qualification-output-manifest.json.gz": {
+      "bytes": 40136,
+      "sha256": "ddd994cf7ec02c101b79b44b4251964165d852226cec62df2a15979fc9a355eb"
+    },
+    "receipts/qualification-summary.json": {
+      "bytes": 733,
+      "sha256": "63560fb047ea82a59ef44d250921dc81cb86c2fd1aa8f2b9b4dc14305aa6f7d5"
+    },
+    "receipts/repeat-build-attempt.json.gz": {
+      "bytes": 2425,
+      "sha256": "2d337b53cf4ec338e55db405e685d67b018c53658da2c2bd983407a59a9217f9"
+    },
+    "receipts/repeat-build.log.gz": {
+      "bytes": 3421,
+      "sha256": "35cc9edff070a2c98585cfcec8e129eff1fc7326662338b7514eda0629a1cb11"
+    },
+    "receipts/repeat-reproduction.json": {
+      "bytes": 8962,
+      "sha256": "7aea6b660af3f8e2409cc9f5434a48044a38ff39569c2da91a263d79ee3eac5d"
+    },
+    "receipts/reproduction.json": {
+      "bytes": 8951,
+      "sha256": "9ce77a287ea85a33357c8d6fc13f95babd06dd201e06f32d080c59479df8abd2"
+    },
+    "verify.py": {
+      "bytes": 8409,
+      "sha256": "cb1cb8de52a8d93d681308f7e14a8535249d531af647244bca794aefc3673eb8"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "host": {
+    "command": [
+      "sw_vers"
+    ],
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B5101f\n",
+    "stderr": ""
+  },
+  "architecture": {
+    "command": [
+      "uname",
+      "-m"
+    ],
+    "returncode": 0,
+    "stdout": "arm64\n",
+    "stderr": ""
+  },
+  "apple-verification": {
+    "command": [
+      "/usr/bin/codesign",
+      "--verify",
+      "--strict",
+      "--verbose=2",
+      "-R",
+      "=anchor apple",
+      "/usr/bin/sandbox-exec"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "/usr/bin/sandbox-exec: valid on disk\n/usr/bin/sandbox-exec: satisfies its Designated Requirement\n/usr/bin/sandbox-exec: explicit requirement satisfied\n"
+  },
+  "signature-details": {
+    "command": [
+      "/usr/bin/codesign",
+      "-d",
+      "-r-",
+      "--verbose=4",
+      "/usr/bin/sandbox-exec"
+    ],
+    "returncode": 0,
+    "stdout": "designated => identifier \"com.apple.sandbox-exec\" and anchor apple\n",
+    "stderr": "Executable=/usr/bin/sandbox-exec\nIdentifier=com.apple.sandbox-exec\nFormat=Mach-O universal (arm64e arm64e.x1)\nCodeDirectory v=20400 size=271 flags=0x0(none) hashes=3+2 location=embedded\nPlatform identifier=27\nVersionPlatform=1\nVersionMin=1769984\nVersionSDK=1769984\nHash type=sha256 size=32\nCandidateCDHash sha256=3b0128c807224af6045e382814cb3847baedbf85\nCandidateCDHashFull sha256=3b0128c807224af6045e382814cb3847baedbf85c410646db5e77c910443be08\nHash choices=sha256\nCMSDigest=3b0128c807224af6045e382814cb3847baedbf85c410646db5e77c910443be08\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=16384\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=3b0128c807224af6045e382814cb3847baedbf85\nSignature size=4202\nAuthority=macOS Software Signing\nAuthority=Apple Code Signing Certification Authority\nAuthority=Apple Root CA\nSigned Time=Sep 30, 2026 at 12:29:20\u202fAM\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nTotal signatures=1\nChosen signature=1\n"
+  },
+  "guard_sha256": "0c39f18a1a71e2c31cc9a07deac4418a1701454718df98caa812705f84520e3e",
+  "guard_bytes": 135136,
+  "observed_unix": 1793042237.782462,
+  "scope": "Current Apple-signed OS input on this host; not compiler/cache/historical provenance."
+}

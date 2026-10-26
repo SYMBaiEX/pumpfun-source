@@ -1,0 +1,17 @@
+{
+  "scope": "NEW regenerated finite qualification, not restored deleted receipts",
+  "candidate_sha256": "fdfdb5f27af9b8c22effd48ea523c06bd037ceedf49df0da8178cad19eed38f5",
+  "differential_cases": 9269,
+  "surfpool_comparisons": 1024,
+  "surfpool_signed_transactions": 2048,
+  "failures": [],
+  "retained_orchestration_failure": "port-precheck-recovery.json; target not started for affected prechecks",
+  "crypto": {
+    "transaction_fields": 17966,
+    "signature_fields": 27332
+  },
+  "unique_signed_payloads": 3003,
+  "runtime_normalization_unchanged": true,
+  "runtime_input_hashes_unchanged": 300,
+  "limits": "Finite synthetic/captured fixtures; no whole ELF identity, full ABI, historical replay or security completeness."
+}

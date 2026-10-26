@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "observed_unix": 1793042468.193724,
+  "runs": [
+    {
+      "run": "native-build",
+      "outputs": {
+        "executable": {
+          "bytes": 1590856,
+          "sha256": "fdfdb5f27af9b8c22effd48ea523c06bd037ceedf49df0da8178cad19eed38f5",
+          "literal_byte_equal_to_tested": true
+        },
+        "unstripped": {
+          "bytes": 2174728,
+          "sha256": "1e088e9add0218ebf6745a7f7557a4dc55dc68e86ec97790584db7f169c14bc3",
+          "literal_byte_equal_to_tested": true
+        }
+      }
+    },
+    {
+      "run": "native-repeat",
+      "outputs": {
+        "executable": {
+          "bytes": 1590856,
+          "sha256": "fdfdb5f27af9b8c22effd48ea523c06bd037ceedf49df0da8178cad19eed38f5",
+          "literal_byte_equal_to_tested": true
+        },
+        "unstripped": {
+          "bytes": 2174728,
+          "sha256": "1e088e9add0218ebf6745a7f7557a4dc55dc68e86ec97790584db7f169c14bc3",
+          "literal_byte_equal_to_tested": true
+        }
+      }
+    }
+  ],
+  "original_deployed_byte_identity_claimed": false
+}
