@@ -1,0 +1,115 @@
+{
+  "comparisons": 9589,
+  "mismatches": 0,
+  "suites": [
+    {
+      "suite": "mayhem-admin",
+      "cases": 1051,
+      "sha256": "5be897d183e63a40ec71fd9d679b0b45e9d0c671a12d44ee0d431708413003d3"
+    },
+    {
+      "suite": "mayhem-buy-pump-swap-token22",
+      "cases": 419,
+      "sha256": "6759abeb926ee779cd0a45418c6449abf1acbc4230f968a700d8293a42924076"
+    },
+    {
+      "suite": "mayhem-buy",
+      "cases": 486,
+      "sha256": "bd6032724f8ac62136d8418ddb02c4e707e599b7fd2b792c0046606dd37e8bd3"
+    },
+    {
+      "suite": "mayhem-recipient",
+      "cases": 306,
+      "sha256": "f221cde1364a8e72045fcc5f8998d76bd051391424c3fb450685233bbc79c837"
+    },
+    {
+      "suite": "mayhem-sell-pump-swap-token22",
+      "cases": 413,
+      "sha256": "c79ada14c950a1d9868f3fc42225c5e025d370fb14588ed403d2ea638baadaa1"
+    },
+    {
+      "suite": "mayhem-sell-v2-token22",
+      "cases": 473,
+      "sha256": "35e0acbb21571d5dc6bdfbabaaf0fd7ceb091c9fe711dc26e6eb71c5a2e54263"
+    },
+    {
+      "suite": "mayhem-buy-pump-swap-token",
+      "cases": 419,
+      "sha256": "78fa905960f03da2aa2300c33d5595dca2ef622331b322c6dbb9108e2c907fe9"
+    },
+    {
+      "suite": "mayhem-buy-v2-token22",
+      "cases": 613,
+      "sha256": "013e3084a59bdf2a5d9e2ad213c953113dd98c8224cd9e8bf294e386c9f0c336"
+    },
+    {
+      "suite": "mayhem-quote-withdraw",
+      "cases": 329,
+      "sha256": "23bdc4e57edb30980d906b8a05dd0a9d5d7412a346e98cbc739b14cff805e6f5"
+    },
+    {
+      "suite": "mayhem-sell-pump-swap-token",
+      "cases": 413,
+      "sha256": "389d41e8d5d068fa07d2006ada0906adba5307588174ab8f2adf0ed46863f944"
+    },
+    {
+      "suite": "mayhem-sell-v2-token",
+      "cases": 473,
+      "sha256": "1ddbffdf277c9428681465967f56be0490596f304c7b29ae5906651330cdff29"
+    },
+    {
+      "suite": "mayhem-sweeps",
+      "cases": 692,
+      "sha256": "f9e0a28af11f5abb315c8efd887f50d611696f9ea3a5b61aa5fbb8b31b1072aa"
+    },
+    {
+      "suite": "mayhem-withdraw",
+      "cases": 274,
+      "sha256": "3da19b9def3326e7596dde9c8be9d3439ad7b194cf2515369dd424317c4a213a"
+    },
+    {
+      "suite": "mayhem-buy-pump-swap-native",
+      "cases": 419,
+      "sha256": "deb5c648bb8f59f79e80d5b7f03d27ee88624dba29b7f551f989d4e6bece6515"
+    },
+    {
+      "suite": "mayhem-buy-v2-native",
+      "cases": 613,
+      "sha256": "fc556ef8c86dff2b0a12e6266509d28fd79207360642ce53ec7494cacc84501b"
+    },
+    {
+      "suite": "mayhem-buy-v2-token",
+      "cases": 613,
+      "sha256": "29f53b8f06ae29c16c6b7a8da05a1a15f63201a15f0100f9e0c1565b5c6f70c2"
+    },
+    {
+      "suite": "mayhem-extend",
+      "cases": 301,
+      "sha256": "dea677d5dd91bba3e47a4702958ad717bf80cb86cb6729323ed8fa076723a52e"
+    },
+    {
+      "suite": "mayhem-sell-pump-swap-native",
+      "cases": 413,
+      "sha256": "1578bb54bcc200bb1b7a49a6c62a4d846ac11d7d27bf05e1bd84d3dea1dc6f07"
+    },
+    {
+      "suite": "mayhem-sell-v2-native",
+      "cases": 473,
+      "sha256": "e6a1b02ac5d0bc6f2f4bb7b405ea1657eb7bc42818bd81edada8522d8dc9a80c"
+    },
+    {
+      "suite": "mayhem-sell",
+      "cases": 396,
+      "sha256": "4343c4975c32da16531403a9013bb5a775cc0423aa0181e1be370109b181f2b8"
+    }
+  ],
+  "burn_sequences": 3,
+  "burn_signed_transactions": 12,
+  "burn_known_differing_fields": [
+    "second.logs_without_compute_numbers"
+  ],
+  "burn_existing_verifier_returncode": 0,
+  "raw_reports_exported": false,
+  "local_raw_root": "/Users/symbiex/dev/austin/lalalune/mayhem-initializer-recovery-20261026/regression",
+  "limits": "Existing fixtures and normalization unchanged; burn error-log differences remain. Counts include repeated inputs."
+}

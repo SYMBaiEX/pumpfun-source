@@ -13,10 +13,10 @@ AnchorError output):
 
   0 payer                     (signer, mut)
   1 global_params             Account<GlobalParams>, PDA ["global-params"] @ mayhem
-  2 mint_authority            PDA ["mint-authority"] @ PUMP (6EF8..), **Signer**
+  2 mint_authority            PDA ["mint-authority"] @ PUMP (6EF8..), signer-constrained
   3 sol_vault                 PDA ["sol-vault"] @ mayhem
   4 mint                      InterfaceAccount<Mint>, Token-2022, must pre-exist
-  5 mayhem_token_vault        token-2022 ATA, authority = sol_vault, must pre-exist
+  5 mayhem_token_vault        token-2022 ATA, authority = sol_vault, init if needed
   6 mayhem_state              Account<MayhemState>, init, PDA ["mayhem-state", mint]
   7 system_program
   8 token_program             = Token-2022 (TokenzQdB..)
@@ -37,13 +37,9 @@ and no locally generated keypair, can honestly provide that signature. Forcing i
 (e.g. a synthetic/unchecked signer) would be a synthetic-signer bypass, which is
 disallowed.
 
-Therefore `initialize_mayhem_state` is a CPI target of the pump program, not a
-standalone instruction. The only honest driver is a genuine pump-program CPI
-(a mayhem-mode pump create), which is not available as captured evidence and
-whose pump-side mayhem-creation path is itself only partially reconstructed.
-pump/deployed.so references the mayhem program id but does NOT contain this
-instruction's discriminator as a literal, consistent with a non-literal/al
-dynamically-built CPI path rather than a reproducible standalone call.
+Therefore successful validation requires a genuine pump-program CPI. The sibling
+`pump_create_mayhem_differential.py` drives that path with the captured pump
+program. This script checks only the standalone rejection order.
 
 Output JSON = {"cases": [...], "mismatches": [...]} per the repo convention.
 Because no valid Ok transaction exists, there is no 0-mismatch positive
@@ -214,7 +210,7 @@ def main():
             'payer(signer,mut)', 'global_params(PDA[global-params]@mayhem)',
             'mint_authority(PDA[mint-authority]@pump, SIGNER)', 'sol_vault(PDA[sol-vault]@mayhem)',
             'mint(InterfaceAccount<Mint>, Token-2022, pre-existing)',
-            'mayhem_token_vault(Token-2022 ATA authority=sol_vault, pre-existing)',
+            'mayhem_token_vault(Token-2022 ATA authority=sol_vault, init if needed)',
             'mayhem_state(init, PDA[mayhem-state,mint])', 'system_program',
             'token_program(=Token-2022)', 'associated_token_program'],
         'terminal_blocker_confirmed': bool(signer_gate),
@@ -231,8 +227,10 @@ def main():
                       'valid_init_transaction_constructible': False,
                       'terminal_blocker_confirmed': bool(signer_gate),
                       'terminal_blocker': orig_full['anchor_error']}))
-    # Non-zero exit signals that no positive (Ok) oracle case could be formed.
-    raise SystemExit(0 if signer_gate else 2)
+    # Confirming the original signer gate alone must not hide candidate mismatches.
+    if not signer_gate:
+        raise SystemExit(2)
+    raise SystemExit(1 if mismatches else 0)
 
 
 if __name__ == '__main__':

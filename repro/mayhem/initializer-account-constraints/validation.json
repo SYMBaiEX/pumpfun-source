@@ -1,0 +1,29 @@
+{
+  "source_recovery": "Deferred signer constraint and conditional associated-token vault initialization, supported by original disassembly and runtime.",
+  "candidate_sha256": "b088163ae28a3e03649f2da8de03ca7b053a1397275b0fa61716a9f720180d76",
+  "candidate_bytes": 695456,
+  "whole_deployed_byte_equality": false,
+  "compiled_source_matches_published_overlay": true,
+  "fresh_builds_with_same_output": 2,
+  "baseline_matches_tracked_cbe8": true,
+  "standalone_mismatches_before": 5,
+  "standalone_mismatches_after": 0,
+  "standalone_cases": 5,
+  "vault_variants": 7,
+  "pump_cpi_cases": 17,
+  "pump_cpi_successes": 11,
+  "pump_caller": "Unmodified captured original Pump; only Mayhem is replaced.",
+  "comparison_scope": "Standalone and vault cases compare error, AnchorError and state_created. CPI cases retain existing before/after, error, events, inner-instruction and return-data comparisons; raw logs and compute are not equality assertions.",
+  "original_parser_bytes": 8784,
+  "candidate_parser_bytes": 10576,
+  "parser_raw_equal": false,
+  "ordered_raw_instruction_matches_before": 135,
+  "ordered_raw_instruction_matches_after": 204,
+  "instruction_alignment_scope": "Diagnostic ordered exact instruction matching only, not body identity, semantic coverage or a recovery percentage.",
+  "source_and_runner_sha256": {
+    "repro/behavioral-recovery/programs/mayhem/src/lib.rs": "96b324a3ca33c48848465ade3543b4e55d7565547373b9b9ec263fca4c10cd5b",
+    "repro/behavioral-recovery/scripts/mayhem_initialize_state_differential.py": "ed08573e0de50ca9455a16f43836acf7487f6654b5c55f1effc765c702b50d76",
+    "repro/behavioral-recovery/scripts/pump_create_mayhem_differential.py": "e994398fa2a739f397b8865df4f6e10e60ff0fc1714ee47670ed0262e5768929",
+    "repro/mayhem/initializer-account-constraints/check_vaults.py": "ff38af7e35b515338e1331bd355ed5a413a306a0af64ccf9e512b37ac80eac85"
+  }
+}

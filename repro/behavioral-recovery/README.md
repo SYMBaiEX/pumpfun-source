@@ -14,20 +14,22 @@ need a dispatch-complete build for local SDK testing.
 | v3 Token-2022 transfer-fee quotes (`buy_v3`, `sell_v3`, `buy_exact_quote_in_v3`) | pump | 126 cases, 0 mismatches |
 | `set_mayhem_virtual_params` (dormant, CPI-only) | pump | 84 cases, 0 mismatches (signer-stub driver) |
 
-Known gap: called standalone (not through pump's CPI), `initialize_mayhem_state`
-rejects in a different order than the original. The candidate fails first with
-3010 AccountNotSigner on `mint_authority`; the original first fails mint
-deserialization (3012) and only then raises 2002 ConstraintSigner. This suggests the
-original declares `mint_authority` as an `UncheckedAccount` with a `signer`
-constraint rather than a `Signer<'info>`
-(`scripts/mayhem_initialize_state_differential.py` here reproduces it: 5/5 cases differ).
+The initializer's account-validation mismatch is corrected: `mint_authority` uses
+an unchecked account with an explicit signer constraint, and the associated vault
+uses `init_if_needed`. Both constraints follow original disassembly and runtime
+traces. The five previously differing standalone cases and seven vault-data
+variants now match; all 17 genuine Pump-to-Mayhem CPI cases still match. See
+[the source-recovery evidence](../mayhem/initializer-account-constraints/README.md).
+Whole-program and complete-parser byte identity remain unresolved.
 
 With the overlay applied, pump dispatches 56/56 IDL instructions and Mayhem 25/25.
 Builds of this overlay on 2026-10-26 (`scripts/build_partial_candidate.py`):
 
-- Mayhem (v1.52) reproduces the committed candidate byte-for-byte:
-  `repro/mayhem/recovered-dispatch-25-from-main-v152/main/candidate.so`
-  (sha256 `cbe8c8e71f0c256326cf639f303b3d939244320637531d79041585c9358020e2`).
+- Corrected Mayhem (v1.52):
+  `repro/mayhem/initializer-account-constraints/candidate.so`
+  (sha256 `b088163ae28a3e03649f2da8de03ca7b053a1397275b0fa61716a9f720180d76`).
+  The earlier `cbe8c8e7…` candidate remains an unchanged pre-correction baseline in
+  `repro/mayhem/recovered-dispatch-25-from-main-v152/main/`.
 - Pump (v1.44) builds to sha256
   `df61557a0bed2450d32b277df56a68d3e58ecd87e41486b9ea4c2071e9a67155`. It differs
   from the older committed candidate

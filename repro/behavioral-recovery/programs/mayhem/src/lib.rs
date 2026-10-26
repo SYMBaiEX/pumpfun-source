@@ -247,13 +247,13 @@ pub struct InitializeMayhemState<'info> {
     #[account(seeds = [b"global-params"], bump)]
     pub global_params: Account<'info, GlobalParams>,
     /// CHECK: pump's off-curve mint-authority PDA; required signer supplied by pump via invoke_signed.
-    #[account(seeds = [b"mint-authority"], bump, seeds::program = state::PUMP_ID)]
-    pub mint_authority: Signer<'info>,
+    #[account(signer, seeds = [b"mint-authority"], bump, seeds::program = state::PUMP_ID)]
+    pub mint_authority: UncheckedAccount<'info>,
     /// CHECK: canonical Mayhem sol-vault PDA, authority of the created token vault.
     #[account(seeds = [b"sol-vault"], bump)]
     pub sol_vault: UncheckedAccount<'info>,
     pub mint: InterfaceAccount<'info, Mint>,
-    #[account(init, payer = payer, associated_token::mint = mint, associated_token::authority = sol_vault, associated_token::token_program = token_program)]
+    #[account(init_if_needed, payer = payer, associated_token::mint = mint, associated_token::authority = sol_vault, associated_token::token_program = token_program)]
     pub mayhem_token_vault: InterfaceAccount<'info, TokenAccount>,
     #[account(init, payer = payer, space = 106, seeds = [b"mayhem-state", mint.key().as_ref()], bump)]
     pub mayhem_state: Account<'info, state::MayhemState>,
